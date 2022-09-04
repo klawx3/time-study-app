@@ -1,1 +1,15 @@
-<p>user-information-card works!</p>
+<div class="card" style="width: 15rem;">
+    <h5 class="card-header">{{user.name}} </h5>
+    <div class="card-body">
+
+        <div class="row">
+            <div class="col">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">deuda: {{ getActualDebt() }}</li>
+                    <li class="list-group-item">deuda nf: {{user.unverifiedStudiedHours}}</li>
+                    <li class="list-group-item">horas no verificadas: {{getActualNoVerifiedDebt()}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

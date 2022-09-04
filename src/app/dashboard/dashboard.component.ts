@@ -1,13 +1,29 @@
 import { Component, OnInit } from '@angular/core';
+import { UserInformation } from '../shared/user-information.model';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  public usersInformations: UserInformation[];
+  constructor() {
+    this.usersInformations = [
+      {
+        name: "klawx3",
+        totalDebtHours: 72,
+        totalStudiedHours: 55,
+        unverifiedStudiedHours: 4
+      },
+      {
+        name: "aracanox",
+        totalDebtHours: 55,
+        totalStudiedHours: 23,
+        unverifiedStudiedHours: 2
+      },
+    ]
+  }
 
   ngOnInit(): void {
   }
